@@ -1,6 +1,6 @@
-TAG?=latest
+TAG?=go1.6
 
-all: golang-ci warden-ci with-volume inigo-ci diego-docker-app diego-docker-app-custom
+all: golang-ci with-volume inigo-ci diego-docker-app diego-docker-app-custom
 
 .PHONY: golang-ci warden-ci with-volume inigo-ci diego-docker-app diego-docker-app-custom
 

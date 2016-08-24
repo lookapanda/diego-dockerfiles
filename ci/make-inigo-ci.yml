@@ -3,7 +3,8 @@ platform: linux
 inputs:
 - name: diego-dockerfiles
 - name: inigo-ci
-  rootfs: true
+  params:
+    rootfs: true
 outputs:
 - name: inigo-rootfs
 image_resource:

@@ -13,6 +13,6 @@ ENV PORT 7070
 
 EXPOSE 7070
 
-COPY ../../docker-app-custom/dockerapp /myapp/dockerapp
+COPY dockerapp /myapp/dockerapp
 WORKDIR /myapp
 CMD ["./dockerapp"]

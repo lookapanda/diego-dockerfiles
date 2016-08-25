@@ -2,7 +2,6 @@
 platform: linux
 inputs:
 - name: diego-dockerfiles
-- name: diego-docker-app-custom
 outputs:
 - name: docker-app-custom
 image_resource:
@@ -15,6 +14,6 @@ run:
   args:
   - -c
   - |
-    cd diego-dockerfiles/diego-docker-app-custom
+    cd diego-dockerfiles/diego-docker-app
     CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build dockerapp.go -o ../../docker-app-custom/dockerapp
 

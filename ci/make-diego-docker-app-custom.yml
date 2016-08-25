@@ -16,5 +16,5 @@ run:
   - -c
   - |
     cd diego-dockerfiles/diego-docker-app-custom
-    CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o dockerapp ../../docker-app-custom/dockerapp.go
+    CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build dockerapp.go -o ../../docker-app-custom/dockerapp
 

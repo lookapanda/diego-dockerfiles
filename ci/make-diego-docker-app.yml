@@ -1,7 +1,7 @@
 ---
 platform: linux
 inputs:
-- name: diego-dockerfiles
+- name: git-diego-docker-app
 outputs:
 - name: docker-app
 image_resource:
@@ -14,7 +14,7 @@ run:
   args:
   - -c
   - |
-    cp -r diego-dockerfiles/diego-docker-app/* docker-app
-    cd diego-dockerfiles/diego-docker-app
-    CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o ../../docker-app/dockerapp dockerapp.go
+    cp -r git-diego-docker-app/diego-docker-app/* docker-app
+    cd docker-app
+    CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o dockerapp dockerapp.go
 

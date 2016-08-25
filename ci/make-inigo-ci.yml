@@ -1,10 +1,10 @@
 ---
 platform: linux
 inputs:
-- name: diego-dockerfiles
-- name: inigo-ci
+- name: inigo-ci-rootfs
+- name: git-inigo-ci
 outputs:
-- name: inigo-rootfs
+- name: inigo-ci-with-rootfs
 image_resource:
   type: docker-image
   source:
@@ -15,6 +15,5 @@ run:
   args:
   - -c
   - |
-    cd diego-dockerfiles/inigo-ci
-    make inigo-test-rootfs.tar
-    mv inigo-test-rootfs.tar ../inigo-ci/rootfs.tar
+    cp git-inigo-ci/inigo-ci/Dockerfile inigo-ci-with-rootfs
+    cp inigo-ci-rootfs/rootfs.tar inigo-ci-with-rootfs

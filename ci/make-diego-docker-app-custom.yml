@@ -15,6 +15,6 @@ run:
   - -c
   - |
     cp -r git-diego-docker-app-custom/diego-docker-app-custom/* docker-app-custom
-    cd diego-dockerfiles/diego-docker-app
+    cd git-diego-docker-app-custom/diego-docker-app
     CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o ../../docker-app-custom/dockerapp dockerapp.go
 

@@ -1,0 +1,20 @@
+---
+platform: linux
+inputs:
+- name: diego-dockerfiles
+- name: diego-docker-app-custom
+outputs:
+- name: docker-app-custom
+image_resource:
+  type: docker-image
+  source:
+    repository: cloudfoundry/diego-pipeline
+
+run:
+  path: sh
+  args:
+  - -c
+  - |
+    cd diego-dockerfiles/diego-docker-app-custom
+    CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o dockerapp ../../docker-app-custom/dockerapp.go
+

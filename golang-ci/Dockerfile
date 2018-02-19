@@ -24,6 +24,13 @@ RUN \
     strace \
     wget \
     mercurial \
+    make \
+    gcc \
+    g++ \
+    autoconf \
+    automake \
+    cmake \
+    nasm \
   && \
   apt-get clean
 
